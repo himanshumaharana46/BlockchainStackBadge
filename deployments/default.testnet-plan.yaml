@@ -1,0 +1,18 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: badge-nft
+            expected-sender: ST28FCMDR8WWGTBHQT654619PNB5WG05ESWMYC5Y9
+            cost: 12560
+            path: "contracts\\badge-nft.clar"
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.1"
